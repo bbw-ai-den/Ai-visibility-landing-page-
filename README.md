@@ -1,2 +1,2 @@
-# BigBrainWay Instagram Landing Page
-This is the landing page for instagram
+# Ai-Visibility-Landing-Page
+# BigBrainWay AI Search Visibility landing page for clinics, medspas, and healthcare practices
