@@ -26,7 +26,8 @@ Visitors can select their current digital maturity stage and submit their contac
 * HTML
 * CSS
 * JavaScript
-* Netlify Forms
+* Google Apps Script
+* Google Sheets
 
 ## 📁 Project Structure
 
@@ -76,28 +77,47 @@ public/
 * First Name field
 * WhatsApp or Email field
 * Selected maturity stage submitted with the form
-* Netlify Forms integration
+* Google Apps Script form submission
+* Google Sheets lead storage
 * Responsive design
 * Mobile-friendly layout
 * Animated visual content
 * Astro-based static site
 
-## 📋 Lead Form
+## 📋 Form Submission
 
-The main form uses Netlify Forms for lead collection.
+The landing page uses **Google Apps Script** to process form submissions.
 
-The form includes:
+Submitted lead information is sent from the landing page to a Google Apps Script web endpoint. The Apps Script processes the submitted data and stores it in a connected **Google Sheet**.
+
+The form collects information such as:
 
 * First Name
 * WhatsApp or Email
 * Selected digital maturity stage
-* Hidden campaign source
+* Campaign source
 
 The campaign source is:
 
 ```text
 Instagram
 ```
+
+### Submission Flow
+
+```text
+Visitor
+   ↓
+Instagram Landing Page
+   ↓
+Lead Form
+   ↓
+Google Apps Script Web App
+   ↓
+Google Sheets
+```
+
+This approach keeps the landing page independent of Netlify Forms and allows submitted leads to be managed directly through Google Sheets.
 
 ## 🚀 Running the Project
 
@@ -133,15 +153,15 @@ npm run preview
 
 ## 🌐 Deployment
 
-The project is connected to the Big Brain Way GitHub organization repository.
-
-The Instagram landing page is maintained on the:
+The Instagram landing page is maintained in the Big Brain Way GitHub organization repository on the:
 
 ```text
 main
 ```
 
 branch.
+
+The form submission system is handled separately through Google Apps Script and Google Sheets.
 
 ## 🧞 Astro Commands
 
